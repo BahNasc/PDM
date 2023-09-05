@@ -9,7 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SorteioApp"
+        android:theme="@style/Theme.Sorteadorapp"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"

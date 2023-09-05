@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sorteioapp'
+    namespace 'com.example.sorteadorapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.sorteioapp"
-        minSdk 24
+        applicationId "com.example.sorteadorapp"
+        minSdk 29
         targetSdk 33
         versionCode 1
         versionName "1.0"
