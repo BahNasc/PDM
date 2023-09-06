@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity { //essa é a classe princip
         super.onCreate(savedInstanceState);              //para ser inicializado
         setContentView(R.layout.activity_main);         //setando o layout (activitymain)
         btnSorteio = findViewById(R.id.btnSorteador);
-        tvNumSorteio = findViewById(R.id.txtValorSorteado);     //(puxa kkk) os valores do
+        tvNumSorteio = findViewById(R.id.txtValorSorteado);     //(puxa) os valores do
         editNumMin = findViewById(R.id.textMenorNum);          // layout associando-os com a variável
         editNumMax = findViewById(R.id.textMaiorNum);
     }
 
-    public void sorteiaNumero(View v) { //Método quando clicar o button
+    public void sorteiaNumero(View v) { //Método quando clicar no button
         valMin = Integer.parseInt(editNumMin.getText().toString());  //pega os valores do layout
         valMax = Integer.parseInt(editNumMax.getText().toString()); // e transformar (parseInt) em inteiro
 
-        int qualquerNum = rand.nextInt((valMax - valMin) + 1) + valMin; //declara uma variavel que rodará um
+        int qualquerNum = rand.nextInt((valMax - valMin) + 1) + valMin; //declarei uma variavel que rodará um
         tvNumSorteio.setText(String.valueOf(qualquerNum));                   // um número aleatório através do rand
     }                                                                       // seta a variével qualquerNum no layout (aparece lá)
 }
