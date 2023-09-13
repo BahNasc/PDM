@@ -9,31 +9,12 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="333dp"
-        android:layout_height="573dp"
+        android:layout_width="411dp"
+        android:layout_height="732dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.803" />
 
-    <Button
-        android:id="@+id/buttonAcima"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salvar"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="72dp" />
-
-    <TextView
-        android:id="@+id/txtViewAcima"
-        android:layout_width="146dp"
-        android:layout_height="33dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="VALOR"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="80dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

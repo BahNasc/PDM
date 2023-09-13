@@ -6,34 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
+import java.util.ArrayList;
+
+
 public class MainActivity extends AppCompatActivity {
-    String[] nomes;
-    android.widget.ListView ListView;
+
+    ListView listView;
+    ArrayList<ItemChurrasco> listaItensChurrasco = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       ListView=findViewById(R.id.listView);
 
-       nomes= new String[]{};
-        ArrayAdapter<String>arrayAdapter=new ArrayAdapter(
-                this,
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                nomes
-        );
-        ListView.setAdapter(arrayAdapter);
-        ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+        listView = findViewById(R.id.listView);
+        listaItensChurrasco.add(new ItemChurrasco(1, "Carne", R.drawable.carne));
+        listaItensChurrasco.add(new ItemChurrasco(2, "Linguiça", R.drawable.linguica));
+        listaItensChurrasco.add(new ItemChurrasco(3, "Refrigerante", R.drawable.refri));
+        listaItensChurrasco.add(new ItemChurrasco(4, "Pão de Alho", R.drawable.paodealho));
+        listaItensChurrasco.add(new ItemChurrasco(5, "Carvão", R.drawable.carvao));
 
-                Toast.makeText(getApplicationContext(), "blabla"+Integer.toString(i),Toast.LENGTH_LONG).show();
-            }
-
-        });
+        ItemChurrasscoAdapter adapter = new ItemChurrasscoAdapter(this, R.layout.item_churrasco, listaItensChurrasco);
+        listView.setAdapter(adapter);
     }
 }
