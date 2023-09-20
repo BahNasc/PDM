@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,15 +28,17 @@ public class ItemChurrasscoAdapter extends ArrayAdapter<ItemChurrasco> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //inflar layout
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView=inflater.inflate(mResourse,parent, attachToRoot: false);
+        convertView=inflater.inflate(mResource,parent, false);
+
       //  return super.getView(position, convertView, parent);
+        TextView Nome = convertView.findViewById(R.id.nome);
+        TextView Id = convertView.findViewById(R.id.id);
+        ImageView imgView = convertView.findViewById(R.id.imgView);
 
-        TextView txtNome =convertView.findViewById(R.id.nome);
-        TextView txtId =convertView.findViewById(R.id.id);
-        TextView txtImagem =convertView.findViewById(R.id.imageView);
+        Nome.setText(getItem(position).nome);
+        Id.setText(String.valueOf(getItem(position).id));
+        imgView.setImageResource(getItem(position).imagem);
 
-        txtNome.setText(getItem(position).nome);
-        txtIdd.setText(getItem(position).id);
-        txtImagem.setImagemResource(getItem(position).image);
+        return convertView;
     }
 }
